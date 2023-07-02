@@ -1,0 +1,39 @@
+body {
+  font-family: calibri !important;
+}
+
+/* width */
+body::-webkit-scrollbar,
+.ScreensContainer::-webkit-scrollbar,
+.SideBar::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track,
+.ScreensContainer::-webkit-scrollbar-track,
+.SideBar::-webkit-scrollbar-track {
+  border-radius: 150px;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb,
+.ScreensContainer::-webkit-scrollbar-thumb,
+.SideBar::-webkit-scrollbar-thumb {
+  background: rgb(178, 177, 177);
+  /* border-radius: 150px; */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover,
+.ScreensContainer::-webkit-scrollbar-thumb:hover,
+.SideBar::-webkit-scrollbar-thumb:hover {
+  background: rgb(163, 167, 166);
+}
+
+/* Handle on active */
+body::-webkit-scrollbar-thumb:active,
+.ScreensContainer::-webkit-scrollbar-thumb:active,
+.SideBar::-webkit-scrollbar-thumb:active {
+  background: rgb(117, 120, 119);
+}

@@ -1,0 +1,72 @@
+/* Rubik */
+@font-face {
+    font-family: 'Rubik-Black';
+    src: url('../../public/fonts/Rubik-Black.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-BlackItalic';
+    src: url('../../public/fonts/Rubik-BlackItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Bold';
+    src: url('../../public/fonts/Rubik-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-BoldItalic';
+    src: url('../../public/fonts/Rubik-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-ExtraBold';
+    src: url('../../public/fonts/Rubik-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-ExtraBoldItalic';
+    src: url('../../public/fonts/Rubik-ExtraBoldItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Italic';
+    src: url('../../public/fonts/Rubik-Italic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Light';
+    src: url('../../public/fonts/Rubik-Light.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-LightItalic';
+    src: url('../../public/fonts/Rubik-LightItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Medium';
+    src: url('../../public/fonts/Rubik-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-MediumItalic';
+    src: url('../../public/fonts/Rubik-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-Regular';
+    src: url('../../public/fonts/Rubik-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-SemiBold';
+    src: url('../../public/fonts/Rubik-SemiBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Rubik-SemiBoldItalic';
+    src: url('../../public/fonts/Rubik-SemiBoldItalic.ttf') format('truetype');
+}
+
+/* David */
+@font-face {
+    font-family: 'David-Bold';
+    src: url('../../public/fonts/DavidLibre-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'David-Regular';
+    src: url('../../public/fonts/DavidLibre-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'David-Medium';
+    src: url('../../public/fonts/DavidLibre-Medium.ttf') format('truetype');
+}
+ 
