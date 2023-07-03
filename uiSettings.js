@@ -43,4 +43,3 @@ export const fonts ={
   documentFontMedium: "David-Medium",
 }
 
-export default uiSettings;
