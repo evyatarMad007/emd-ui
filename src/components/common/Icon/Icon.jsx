@@ -14,8 +14,8 @@ import { RiMenu3Fill } from "react-icons/ri";
 import { BsFillDiagram3Fill,BsRocketTakeoff } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { GiThorHammer } from "react-icons/gi";
-import { colors } from "../../../uiSettings";
 import { IconStyle } from "./Icon.styled";
+import { colors } from "../../../../uiSettings";
 
 const Icon = ({
   iconType,
