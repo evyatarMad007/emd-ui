@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import uiSettings from "../../../uiSettings";
+import { fonts } from "../../../../uiSettings";
 
 // PDFPage Component: This component renders content within a single PDF page.
 const PDFPageStyled = styled.div`
@@ -21,7 +22,7 @@ const PDFPageStyled = styled.div`
     letter-spacing: 0.8px;
     font-weight: bold;
     font-size: 12px;
-    font-family: ${uiSettings.fonts.documentFontMedium};
+    font-family: ${fonts.documentFontMedium};
   }
 `;
 

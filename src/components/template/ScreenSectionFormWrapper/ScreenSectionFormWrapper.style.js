@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import uiSettings, { colors } from "../../../../src/uiSettings";
+import { breakPoints, colors, fonts } from "../../../../uiSettings";
 
 export const ScreenSectionFormWrapperStyled = styled.div`
   height: 100vh;
@@ -10,7 +10,7 @@ export const ScreenSectionFormWrapperStyled = styled.div`
   overflow: hidden;
 
   .showcase-container {
-    background-color: ${({ pageData }) => pageData.showcaseBackgroundColor};
+    background-color: ${({ showcaseSection }) => showcaseSection.backgroundColor};
     width: 25.7%;
     position: relative;
 
@@ -59,7 +59,7 @@ export const ScreenSectionFormWrapperStyled = styled.div`
             font-size: clamp(30px, 5vw, 38px);
             letter-spacing: 0.5px;
             color: ${colors.lightFont};
-            font-family: ${uiSettings.fonts.mainFontBold};
+            font-family: ${fonts.mainFontBold};
         }
         .subTitle {
             margin-top: 35px;
@@ -69,7 +69,7 @@ export const ScreenSectionFormWrapperStyled = styled.div`
             width: 80%;
             max-width: 500px;
             color: ${colors.lightFont};
-            font-family: ${uiSettings.fonts.mainFontRegular};
+            font-family: ${fonts.mainFontRegular};
         }
         .logoLink {
           position: absolute;
@@ -80,7 +80,7 @@ export const ScreenSectionFormWrapperStyled = styled.div`
           justify-content: center;
           align-items: center;
           color: ${colors.appMainPrimary2};
-          font-family: ${uiSettings.fonts.mainFontSemiBold};
+          font-family: ${fonts.mainFontSemiBold};
           cursor: pointer;
           user-select: none;
 
@@ -105,7 +105,7 @@ export const ScreenSectionFormWrapperStyled = styled.div`
     }
   }
 
-  @media (max-width: ${uiSettings.breakPoints.width.laptop}) {
+  @media (max-width: ${breakPoints.width.laptop}) {
     .showcase-container {
       display: none;
       width: 0;

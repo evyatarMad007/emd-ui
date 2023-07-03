@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import uiSettings from "../../../src/uiSettings";
+import { fonts } from "../../../../uiSettings";
 
 export const TypographyStyled = styled.span`
   position: ${({ position }) => (position ? position : "static")};
@@ -12,13 +12,13 @@ export const TypographyStyled = styled.span`
 
   font-family: ${({ fWeight }) => {
     if (fWeight === "b") {
-      return uiSettings.fonts.documentFontMedium;
+      return fonts.documentFontMedium;
     } else if (fWeight === "m") {
-      return uiSettings.fonts.documentFontMedium;
+      return fonts.documentFontMedium;
     } else if (fWeight === "r") {
-      return uiSettings.fonts.documentFontRegular;
+      return fonts.documentFontRegular;
     } else {
-      return uiSettings.fonts.documentFontRegular;
+      return fonts.documentFontRegular;
     }
   }};
 

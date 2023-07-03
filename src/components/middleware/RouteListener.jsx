@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import useRouter from "../hooks/useRouter";
+import useRouter from "../../hooks/useRouter";
 import {
   setCurrentMainRoute,
   setCurrentSubRoute,
@@ -9,11 +9,12 @@ import {
   setIs404Page,
 } from "../../../src/store/features/NavigationSlice";
 import uiSettings from "../../../src/uiSettings";
+import { links } from "../../../uiSettings";
 
 const RouteListener = () => {
   const dispatch = useDispatch();
   const { pathname } = useRouter();
-  const routes = uiSettings.links.routeList;
+  const routes = links.routeList;
 
   const getMainRoute = (route) => {
     const currentRoute = routes[route];

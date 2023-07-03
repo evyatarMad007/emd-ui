@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import uiSettings from "../../../uiSettings";
+import { breakPoints, fonts } from "../../../../uiSettings";
 
 export const LogoutButtonStyle = styled.button`
   position: absolute;
@@ -8,24 +8,22 @@ export const LogoutButtonStyle = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: ${uiSettings.fonts.mainFontBold};
+  font-family: ${fonts.mainFontBold};
   background: transparent;
   cursor: pointer;
   width: max-content !important;
   font-size: 15px;
-  font-family: ${uiSettings.fonts.mainFontRegular};
-  color: ${uiSettings.layout.header.linkStyle.linkColor} !important;
+  font-family: ${fonts.mainFontRegular};
+  color: ${({linkColor}) => linkColor ? `${linkColor} !important` :`#000000 !important`};
   border: none;
 
   &:hover {
     span {
-      color: ${uiSettings.layout.main.screensContainer.linkStyle
-        .linkHoverColor} !important;
+      color: ${({linkHoverColor}) => linkHoverColor ? `${linkHoverColor} !important` : `#000000 !important`};
       transition: all 0.15s;
     }
     svg {
-      fill: ${uiSettings.layout.main.screensContainer.linkStyle
-        .linkHoverColor} !important;
+      fill: ${({linkHoverColor}) => linkHoverColor ? `${linkHoverColor} !important` : `#000000 !important`};
       transition: all 0.15s;
     }
   }
@@ -41,8 +39,5 @@ export const LogoutButtonStyle = styled.button`
     svg {
       transform: translateY(2.5px);
     }
-  }
-
-  @media (max-width: ${uiSettings.breakPoints.width.laptop}) {
   }
 `;

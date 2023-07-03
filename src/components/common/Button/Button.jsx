@@ -1,8 +1,8 @@
 import React, { forwardRef } from "react";
-import Popper from "../Popper/Popper";
 import { ButtonStyled, disableStyle } from "./Button.styled";
 import Icon from "../Icon/Icon";
-import { colors } from "../../../uiSettings";
+import { colors } from "../../../../uiSettings";
+
 
 const Button = forwardRef(
   (
@@ -22,12 +22,6 @@ const Button = forwardRef(
         size: 15.5,
         color: colors.baseFont,
       },
-      popper = {
-        positionY: "top",
-        positionX: "center",
-        disable: false,
-        value: null,
-      },
     },
     ref
   ) => {
@@ -44,11 +38,6 @@ const Button = forwardRef(
         padding={padding}
       >
         <div className="button-wrapper" dir={dir}>
-          {!popper.disable && popper.value && (
-            <Popper positionY={popper.positionY} positionX={popper.positionX}>
-              {popper.value}
-            </Popper>
-          )}
           {value && (
             <span
               className="value"

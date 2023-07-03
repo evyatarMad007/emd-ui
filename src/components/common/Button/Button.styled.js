@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { colors } from "../../../uiSettings";
+import { colors } from "../../../../uiSettings";
+
 
 export const ButtonStyled = styled.button`
   width: 100%;
@@ -13,7 +14,7 @@ export const ButtonStyled = styled.button`
   position: relative;
   cursor: pointer;
   box-shadow: 0px 1.3px 1.5px #00000060;
-  background: ${({ background }) => (background ? background : colors.appMainPrimary2)};
+  background: ${({ background }) => (background ? background : colors.defaultPrimaryColor)};
 
   ${({ padding }) => {
     if (padding) {

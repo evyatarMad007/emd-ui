@@ -2,7 +2,7 @@ import React from 'react'
 import { LogoutButtonStyle } from './LogoutButton.styled'
 import Icon from '../Icon/Icon'
 
-const LogoutButton = () => {
+const LogoutButton = ({linkColor, }) => {
   return (
     <LogoutButtonStyle>
         <Icon margin='0 3.25px 0 0' iconType={"logout"} iconSize={17}/>

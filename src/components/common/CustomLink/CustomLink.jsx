@@ -1,13 +1,24 @@
 import { Link, useLocation } from "react-router-dom";
 import { CustomLinkStyle } from "./CustomLink.styled";
 import { useSelector } from "react-redux";
-import { getSelectedLinkType } from "../../../uiSettings";
 
 const CustomLink = ({ href, children, classNameList, linkType, onClick }) => {
   const location = useLocation();
   const { currentMainRoute, subRoutes } = useSelector(
     (state) => state.navigation
   );
+
+  const getSelectedLinkType = (linkType, pathname) => {
+    const links = {
+      sideBar: `/${pathname.split("/")[1]}`,
+      subHeader: pathname,
+      sideBarSettings: pathname,
+      login: pathname,
+      register: pathname,
+      logoImg: pathname,
+    };
+    return links[linkType];
+  }
 
   const getClass = () => {
     let className = `nav-link ${classNameList || ""}`;

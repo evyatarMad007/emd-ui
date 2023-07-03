@@ -15,7 +15,7 @@ const ConfirmDialog = ({ modalType, removeCB, cancelCB, itemName }) => {
   return (
     <ConfirmDialogStyled>
       <p className="dialog-title">
-        Are you sure you want to remove the{" "}
+        Are you sure you want to remove the {" "}
         <span
           className="modal-type"
           style={{ fontSize: "1.2rem", textDecoration: "underline" }}
@@ -30,9 +30,6 @@ const ConfirmDialog = ({ modalType, removeCB, cancelCB, itemName }) => {
             ref={deleteButtonRef}
             onClick={() => removeCB()}
             value={"Yes, Delete it!"}
-            popperValue={`Delete the ${itemName} ${modalType}`}
-            popperPositionX={"center"}
-            popperPositionY={"top"}
             style={{ ...ButtonStyle, backgroundColor: "#ff4d5097" }}
           />
         </div>
@@ -40,9 +37,6 @@ const ConfirmDialog = ({ modalType, removeCB, cancelCB, itemName }) => {
           <Button
             onClick={() => cancelCB()}
             value={"Cancel"}
-            popperValue={"Cancel the Modal"}
-            popperPositionX={"center"}
-            popperPositionY={"top"}
             style={ButtonStyle}
           />
         </div>
