@@ -1,6 +1,6 @@
 {
   "name": "emd-ui",
-  "version": "2.1.1",
+  "version": "3.0.3",
   "description": "A UI component library for React",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -11,7 +11,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc",
     "serve": "vite preview"
   },
   "peerDependencies": {

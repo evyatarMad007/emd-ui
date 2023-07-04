@@ -1,0 +1,7 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { ScreenSectionFormWrapperStyled } from "./ScreenSectionFormWrapper.style";
+import CustomLink from "../../common/CustomLink/CustomLink";
+const ScreenSectionFormWrapper = ({ pageName, children, showcaseSection = { backgroundColor: "", img: "" }, formSection, appData, }) => {
+    return (_jsxs(ScreenSectionFormWrapperStyled, { showcaseColor: showcaseSection.backgroundColor, children: [_jsx("div", { className: "showcase-container", children: _jsx("div", { className: "showcase-img-wrapper", children: showcaseSection?.img && (_jsx("img", { className: "showcase-img", src: showcaseSection.img, alt: `${formSection?.title} showcase img` })) }) }), _jsxs("div", { className: "form-container", children: [_jsxs("div", { className: "form-header", children: [_jsx("h1", { className: "title", children: formSection?.title }), _jsx("p", { className: "subTitle", children: formSection?.description }), _jsx("div", { className: "logoLink", children: appData?.websiteUrl && appData?.appName && (_jsxs(CustomLink, { href: appData.websiteUrl, linkType: "logoImg", children: [appData.icon && _jsx("span", { className: "icon", children: appData.icon }), _jsx("span", { className: "text", children: appData.appName })] })) })] }), _jsx("div", { className: "form-body", children: children })] })] }));
+};
+export default ScreenSectionFormWrapper;

@@ -1,0 +1,10 @@
+src
+dist
+coverage
+node_modules
+storybook-static
+.gitignore
+.npmrc
+tsconfig.json
+vite.config.js
+ui-settings.ts
