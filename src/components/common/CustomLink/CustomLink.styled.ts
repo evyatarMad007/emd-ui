@@ -7,10 +7,10 @@ const {
   sideBarSettings: sideBarSettingsLink,
 } = linkTypes;
 
-type LinkType = typeof sideBarLink | typeof subHeaderLink | typeof sideBarSettingsLink;
+type TypeLinkType = typeof sideBarLink | typeof subHeaderLink | typeof sideBarSettingsLink | typeof linkTypes.logoImg | typeof linkTypes.login | typeof linkTypes.register | typeof linkTypes.sideBar;
 
 interface CustomLinkStyleProps {
-  linkType: LinkType;
+  linkType: TypeLinkType;
 }
 
 export const CustomLinkStyle = styled.div<CustomLinkStyleProps>`
@@ -31,7 +31,7 @@ export const CustomLinkStyle = styled.div<CustomLinkStyleProps>`
     text-decoration: inherit;
     transition: all 0.15s ease-in-out;
   }
-  ${({ linkType }) => {
+  ${( { linkType } ): any => {
     if (linkType === sideBarLink) {
       return css`
         .nav-link {

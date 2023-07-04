@@ -1,25 +1,19 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "outDir": "./dist",
-    "declaration": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "outDir": "dist",
+    "declaration": true,
+    "esModuleInterop": true,
     "isolatedModules": true,
-    "jsx": "react-jsx"
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true, 
+    "lib": ["dom", "dom.iterable", "esnext"]
   },
   "include": [
-    "src",
-    "src/components/middleware",
-    "src/components/common/CustomLink",
-    "components/middleware"
+    "src"
   ]
 }

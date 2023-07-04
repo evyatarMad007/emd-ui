@@ -29,7 +29,7 @@ function useRouter(): UseRouterResult {
     pathname: locationObj.pathname,
     query: new URLSearchParams(locationObj.search),
     params: params as Record<string, string>,
-    match: match as MatchParams | null,
+    match: match as MatchParams | any,
     location: locationObj as Location,
     navigate: (to, options) => navigate(to as string, options),
   };

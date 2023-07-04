@@ -50,7 +50,7 @@ export const PDFTypographyStyled: StyledComponent<"span", any, PDFTypographyStyl
   font-size: ${({ fSize }) => (fSize ? fSize : "1rem")};
   text-decoration: ${({ underLine }) => (underLine ? "underline" : "none")};
 
-  ${({ location }) => {
+  ${({ location }): any => {
     if (location === "center") {
       return `
           display: block;

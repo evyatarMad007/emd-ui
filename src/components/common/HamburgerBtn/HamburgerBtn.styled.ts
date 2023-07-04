@@ -18,7 +18,7 @@ export const HamburgerBtnStyle = styled.button<HamburgerBtnStyleProps>`
     font-size: 27px;
     fill: ${colors.baseFont};
 
-    ${(props) => {
+    ${(props): any => {
       if (props.whiteColor) {
         return `
           fill: ${colors.reverseFont}
