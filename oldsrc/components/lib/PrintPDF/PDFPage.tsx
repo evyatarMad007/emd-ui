@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts } from "../../../../ui-settings";
-
+import { fonts } from "../../../ui-settings";
 
 // PDFPage Component: This component renders content within a single PDF page.
 const PDFPageStyled = styled.div`
@@ -32,7 +31,11 @@ interface PDFPageProps {
   pageAmount: number;
 }
 
-const PDFPage: React.FC<PDFPageProps> = ({ content, pageNumber, pageAmount }) => {
+const PDFPage: React.FC<PDFPageProps> = ({
+  content,
+  pageNumber,
+  pageAmount,
+}) => {
   return (
     <PDFPageStyled>
       {content.map((item, index) => (

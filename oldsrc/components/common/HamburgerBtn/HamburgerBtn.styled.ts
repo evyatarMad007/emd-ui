@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from "../../../../ui-settings";
+import { colors } from "../../../ui-settings";
 
 interface HamburgerBtnStyleProps {
   whiteColor?: boolean;

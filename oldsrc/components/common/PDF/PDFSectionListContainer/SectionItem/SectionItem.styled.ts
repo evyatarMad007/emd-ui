@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { fonts } from "../../../../../../ui-settings";
+import { fonts } from "../../../../../ui-settings";
 
 export const SectionItemStyled = styled.li`
   .section-number {
-      position: absolute;
-      font-weight: bold;
-      font-family: ${fonts.documentFontMedium};
+    position: absolute;
+    font-weight: bold;
+    font-family: ${fonts.documentFontMedium};
   }
   .section-content {
     display: inline-block;

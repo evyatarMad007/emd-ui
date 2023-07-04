@@ -1,9 +1,9 @@
 import React from 'react'
 import Button from './Button'
-import { render } from '@testing-library/react'
+import { render } from '@testing-library/react';
 
 describe('Button', () => {
     test('renders Button component', () => {
-        render(<Button />)
+        render(<Button>Testing</Button>)
     })
 })

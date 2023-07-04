@@ -15,8 +15,7 @@ import { BsFillDiagram3Fill, BsRocketTakeoff } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
 import { GiThorHammer } from "react-icons/gi";
 import { IconStyle } from "./Icon.styled";
-import { colors } from "../../../../ui-settings";
-
+import { colors } from "../../../ui-settings";
 
 type GlobalIconTypes = string;
 type RouteIconTypes = string;

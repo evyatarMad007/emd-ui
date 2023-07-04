@@ -1,13 +1,16 @@
 import React, { MouseEventHandler } from "react";
 import { HamburgerBtnStyle } from "./HamburgerBtn.styled";
-import Icon from "../Icon/Icon";
+import Icon from "../../../../src/components/common/Icon/Icon";
 
 interface HamburgerBtnProps {
   onClick: MouseEventHandler<HTMLButtonElement>;
   whiteColor?: boolean;
 }
 
-const HamburgerBtn: React.FC<HamburgerBtnProps> = ({ onClick, whiteColor = false }) => {
+const HamburgerBtn: React.FC<HamburgerBtnProps> = ({
+  onClick,
+  whiteColor = false,
+}) => {
   return (
     <HamburgerBtnStyle onClick={onClick} whiteColor={whiteColor}>
       <Icon iconType={"hamburger"} iconSize={17} />

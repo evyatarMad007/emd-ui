@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakPoints, fonts } from "../../../../ui-settings";
+import { breakPoints, fonts } from "../../../ui-settings";
 
 interface LogoutButtonStyleProps {
   linkColor?: string;
@@ -19,16 +19,19 @@ export const LogoutButtonStyle = styled.button<LogoutButtonStyleProps>`
   width: max-content !important;
   font-size: 15px;
   font-family: ${fonts.mainFontRegular};
-  color: ${({ linkColor }) => linkColor ? `${linkColor} !important` : `#000000 !important`};
+  color: ${({ linkColor }) =>
+    linkColor ? `${linkColor} !important` : `#000000 !important`};
   border: none;
 
   &:hover {
     span {
-      color: ${({ linkHoverColor }) => linkHoverColor ? `${linkHoverColor} !important` : `#000000 !important`};
+      color: ${({ linkHoverColor }) =>
+        linkHoverColor ? `${linkHoverColor} !important` : `#000000 !important`};
       transition: all 0.15s;
     }
     svg {
-      fill: ${({ linkHoverColor }) => linkHoverColor ? `${linkHoverColor} !important` : `#000000 !important`};
+      fill: ${({ linkHoverColor }) =>
+        linkHoverColor ? `${linkHoverColor} !important` : `#000000 !important`};
       transition: all 0.15s;
     }
   }

@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { CopyToClipboardStyled } from "./CopyToClipboard.styled";
-import Icon from "../Icon/Icon";
+import Icon from "../../../../src/components/common/Icon/Icon";
 
 interface CopyToClipboardProps {
   text: string;
   children?: React.ReactNode;
 }
 
-const CopyToClipboard: React.FC<CopyToClipboardProps> = ({ text, children }) => {
+const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
+  text,
+  children,
+}) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyToClipboard = async () => {

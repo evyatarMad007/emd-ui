@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakPoints, colors, fonts } from "../../../../ui-settings";
+import { breakPoints, colors, fonts } from "../../../ui-settings";
 
 interface ScreenSectionFormWrapperStyledProps {
   showcaseColor?: string;
@@ -14,7 +14,8 @@ export const ScreenSectionFormWrapperStyled = styled.div<ScreenSectionFormWrappe
   overflow: hidden;
 
   .showcase-container {
-    background-color: ${({ showcaseColor }) => showcaseColor || "default-color"};
+    background-color: ${({ showcaseColor }) =>
+      showcaseColor || "default-color"};
     width: 25.7%;
     position: relative;
 
@@ -28,12 +29,12 @@ export const ScreenSectionFormWrapperStyled = styled.div<ScreenSectionFormWrappe
       justify-content: center;
       align-items: center;
       user-select: none;
-      
+
       .showcase-img {
         width: 100%;
         height: auto;
       }
-      
+
       &::before {
         content: "";
         position: absolute;
@@ -41,7 +42,6 @@ export const ScreenSectionFormWrapperStyled = styled.div<ScreenSectionFormWrappe
         left: 0;
         width: 100%;
         height: 100%;
-        
       }
     }
   }
@@ -50,62 +50,61 @@ export const ScreenSectionFormWrapperStyled = styled.div<ScreenSectionFormWrappe
     width: 74.3%;
 
     .form-header {
-        height: 33%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
+      height: 33%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
 
-        .title {
-            margin-top: 150px;
-            /* font-size: 38px; */
-            font-size: clamp(30px, 5vw, 38px);
-            letter-spacing: 0.5px;
-            color: ${colors.lightFont};
-            font-family: ${fonts.mainFontBold};
-        }
-        .subTitle {
-            margin-top: 35px;
-            font-size: 18px;
-            line-height: 1.5;
-            text-align: center;
-            width: 80%;
-            max-width: 500px;
-            color: ${colors.lightFont};
-            font-family: ${fonts.mainFontRegular};
-        }
-        .logoLink {
-          position: absolute;
-          top: 20px;
-          right: 20px;
-          font-size: 25px;
+      .title {
+        margin-top: 150px;
+        /* font-size: 38px; */
+        font-size: clamp(30px, 5vw, 38px);
+        letter-spacing: 0.5px;
+        color: ${colors.lightFont};
+        font-family: ${fonts.mainFontBold};
+      }
+      .subTitle {
+        margin-top: 35px;
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+        width: 80%;
+        max-width: 500px;
+        color: ${colors.lightFont};
+        font-family: ${fonts.mainFontRegular};
+      }
+      .logoLink {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: ${colors.appMainPrimary2};
+        font-family: ${fonts.mainFontSemiBold};
+        cursor: pointer;
+        user-select: none;
+
+        .icon {
+          width: 30px;
+          height: 30px;
           display: flex;
           justify-content: center;
           align-items: center;
-          color: ${colors.appMainPrimary2};
-          font-family: ${fonts.mainFontSemiBold};
-          cursor: pointer;
-          user-select: none;
-
-          .icon {
-            width: 30px;
-            height: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-
         }
+      }
     }
 
     .form-body {
-        height: 67%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        padding: 20px 10px 0 10px;
+      height: 67%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px 10px 0 10px;
     }
   }
 

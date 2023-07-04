@@ -1,5 +1,5 @@
 import styled, { CSSProperties, css } from "styled-components";
-import { colors } from "../../../../ui-settings";
+import { colors } from "../../../ui-settings";
 
 interface PropsStyled {
   padding?: string;
