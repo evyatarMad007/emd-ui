@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "outDir": "dist",
-    "declaration": true,
+    "target": "es5",
     "esModuleInterop": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitReturns": true,
-    "lib": ["dom", "dom.iterable", "esnext"]
-  },
-  "include": ["src", "index.ts"]
+    "strict": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
+  }
 }
