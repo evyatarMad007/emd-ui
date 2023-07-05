@@ -28,7 +28,7 @@ export const Secondary: Story = {
 
 export const Succuss: Story = {
   args: {
-    background: '#6afb8f',
+    background: '#3ad174',
     children: 'Succuss',
   },
 };
