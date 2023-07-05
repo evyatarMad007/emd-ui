@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakPoints, colors, fonts } from "../../../../oldsrc/ui-settings";
+import { breakPoints, colors, fonts } from "../../../ui-settings";
 
 interface ScreenSectionFormWrapperStyledProps {
   showcaseColor?: string;

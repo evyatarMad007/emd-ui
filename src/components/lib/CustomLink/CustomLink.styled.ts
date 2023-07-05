@@ -5,7 +5,7 @@ import {
   fonts,
   layout,
   linkTypes,
-} from "../../../../oldsrc/ui-settings";
+} from "../../../ui-settings";
 const { sideBar, header } = layout;
 const {
   sideBar: sideBarLink,
