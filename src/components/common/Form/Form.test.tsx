@@ -6,7 +6,6 @@ describe("Form", () => {
   test("renders Form component", () => {
     render(
       <Form
-        children={"Test"}
         isValidForm={true}
         onSubmit={() => {}}
         maxWidth="400px"
