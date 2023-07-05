@@ -3,7 +3,8 @@ import Button  from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction
 const meta: Meta = {
-  title: 'ReactComponentLibrary/Button',
+  title: 'common/Button',
+  tags: ['autodocs'],
   component: Button,
 } satisfies Meta<typeof Button>;
 
@@ -13,21 +14,21 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Error: Story = {
   args: {
-    // style: { color: 'red'},
+    background: 'red',
     children: 'Error',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    // style: { color: '#3d7aff'},
+    background: '#3d7aff',
     children: 'Secondary',
   },
 };
 
 export const Succuss: Story = {
   args: {
-    // style: { color: '#6afb8f'},
+    background: '#6afb8f',
     children: 'Succuss',
   },
 };

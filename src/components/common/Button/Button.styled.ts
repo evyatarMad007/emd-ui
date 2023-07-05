@@ -4,6 +4,7 @@ import { colors } from "../../../ui-settings";
 interface PropsStyled {
   padding?: string;
   dir?: "ltr" | "rtl";
+  background? : string;
 }
 
 export const ButtonStyled = styled.button<PropsStyled>`
@@ -17,7 +18,7 @@ export const ButtonStyled = styled.button<PropsStyled>`
   position: relative;
   cursor: pointer;
   box-shadow: 0px 1.3px 1.5px #00000060;
-  background: ${colors.appMainPrimary2};
+  background: ${({ background }) => background || colors.appMainPrimary1};
 
   ${({ padding }) =>
     padding &&

@@ -19,6 +19,7 @@ interface ButtonProps {
   icon?: IconProps;
   className?: string;
   btnType?: "button" | "submit" | "reset";
+  background?: string;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -31,6 +32,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       onClick,
       style,
       className,
+      background,
       btnType = "button",
       icon = { type: null, size: 15.5, color: colors.baseFont },
     },
@@ -41,12 +43,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       style?: CSSProperties
     ): CSSProperties => {
       // if disable is true then return style merged with disableStyle, else return style or an empty object
-      return disable && style ? { ...style, ...disableStyle } : style || {};
+      return disable ? { ...style, ...disableStyle } : style || {};
     };
 
     return (
       <ButtonStyled
         className={className}
+        background={background}
         ref={ref}
         type={btnType}
         dir={dir}
