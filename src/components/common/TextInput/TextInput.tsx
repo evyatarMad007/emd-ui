@@ -9,7 +9,7 @@ interface TextInputProps {
   errorMessage?: string;
   placeholder?: string;
   initValue?: string;
-  fieldType: string;
+  fieldValidation: string;
   type?: string;
   inpDir?: "ltr" | "rtl";
 }
@@ -21,7 +21,7 @@ const TextInput: React.FC<TextInputProps> = ({
   errorMessage,
   placeholder = "",
   initValue = "",
-  fieldType,
+  fieldValidation,
   type = "text",
   inpDir = "ltr",
 }) => {
@@ -37,7 +37,7 @@ const TextInput: React.FC<TextInputProps> = ({
       inpData({ value: "", isValid: false });
     }
 
-    const validate = validateInput(fieldType, inputRef.current?.value || "");
+    const validate = validateInput(fieldValidation, inputRef.current?.value || "");
     setIsValid({
       isError: validate.isError,
       errorMessage: validate.errorMessage,

@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import { ScreenSectionFormWrapperStyled } from "./ScreenSectionFormWrapper.style";
-import CustomLink from "../../common/CustomLink/CustomLink";
+import CustomLink from "../../lib/CustomLink/CustomLink";
 
 export interface ShowcaseSection {
   backgroundColor: string;
@@ -35,7 +35,9 @@ const ScreenSectionFormWrapper: React.FC<ScreenSectionFormWrapperProps> = ({
   appData,
 }) => {
   return (
-    <ScreenSectionFormWrapperStyled showcaseColor={showcaseSection.backgroundColor}>
+    <ScreenSectionFormWrapperStyled
+      showcaseColor={showcaseSection.backgroundColor}
+    >
       <div className="showcase-container">
         <div className="showcase-img-wrapper">
           {showcaseSection?.img && (

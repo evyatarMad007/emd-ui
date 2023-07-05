@@ -20,9 +20,10 @@ export const PopperStyled = styled.div<PopperStyledProps>`
   box-shadow: 2px 3px 0.3rem #00000061;
   z-index: 65;
   user-select: none;
-  display: none;
   font-size: 13px !important;
   animation: popperAnimation 0.45s ease-in-out;
+  /* display: none; */
+  display: flex;
 
   @keyframes popperAnimation {
     0% {

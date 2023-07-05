@@ -1,5 +1,5 @@
 import styled, { StyledComponent } from "styled-components";
-import { fonts } from "../../../../../ui-settings";
+import { fonts } from "../../../../ui-settings";
 
 interface PDFTypographyStyledProps {
   position?: string;
@@ -8,13 +8,18 @@ interface PDFTypographyStyledProps {
   left?: string;
   display?: string;
   margin?: string;
-  fWeight?: 'b' | 'm' | 'r';
+  fWeight?: "b" | "m" | "r";
   fSize?: string;
   underLine?: boolean;
-  location?: 'center' | 'right' | 'left';
+  location?: "center" | "right" | "left";
 }
 
-export const PDFTypographyStyled: StyledComponent<"span", any, PDFTypographyStyledProps, never> = styled.span<PDFTypographyStyledProps>`
+export const PDFTypographyStyled: StyledComponent<
+  "span",
+  any,
+  PDFTypographyStyledProps,
+  never
+> = styled.span<PDFTypographyStyledProps>`
   position: ${({ position }) => (position ? position : "static")};
   width: max-content;
   top: ${({ top }) => (top ? top : "0")};

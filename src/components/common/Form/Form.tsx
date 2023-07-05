@@ -12,7 +12,7 @@ interface SubmitButtonProps {
 interface FormProps {
   onSubmit: () => void;
   submitButton: SubmitButtonProps;
-  children: ReactNode;
+  children: ReactNode | ReactNode[] | string;
   isValidForm: boolean;
   maxWidth?: string;
 }

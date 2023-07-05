@@ -7,7 +7,10 @@ interface CopyToClipboardProps {
   children?: React.ReactNode;
 }
 
-const CopyToClipboard: React.FC<CopyToClipboardProps> = ({ text, children }) => {
+const CopyToClipboard: React.FC<CopyToClipboardProps> = ({
+  text,
+  children,
+}) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copyToClipboard = async () => {

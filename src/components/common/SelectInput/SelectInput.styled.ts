@@ -1,6 +1,6 @@
 // SelectInput.styled.ts
 import styled from "styled-components";
-import { colors } from "../../../../ui-settings";
+import { colors } from "../../../ui-settings";
 
 interface SelectContainerStyledProps {
   inpDir?: "ltr" | "rtl";

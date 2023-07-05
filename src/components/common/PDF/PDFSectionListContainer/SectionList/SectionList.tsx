@@ -10,7 +10,7 @@ const SectionList: React.FC<SectionListProps> = ({ list }) => {
   return (
     <SectionListStyled>
       {
-        list.map((item, index) => {
+        list?.map((item, index) => {
           return (
             <SectionItem section={item} key={index} />
           )

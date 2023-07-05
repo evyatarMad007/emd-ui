@@ -1,6 +1,6 @@
 import React from "react";
 import { ModalTemplateStyled } from "./Modal.styled";
-import Icon from "../../common/Icon/Icon";
+import Icon from "../../../../src/components/common/Icon/Icon";
 
 interface ModalTemplateProps {
   children: React.ReactNode;
@@ -21,7 +21,6 @@ const ModalTemplate: React.FC<ModalTemplateProps> = ({
   iconColor,
   modalError,
 }) => {
-
   if (!isModalActive) return null;
 
   return (
@@ -35,10 +34,7 @@ const ModalTemplate: React.FC<ModalTemplateProps> = ({
             </span>
           )}
           <h2 className="title">{modalTitle}</h2>
-          <button
-            className="close-button"
-            onClick={() => setModal(false)}
-          >
+          <button className="close-button" onClick={() => setModal(false)}>
             <Icon iconType="close" iconSize={20} iconColor="#adadadff" />
           </button>
         </div>

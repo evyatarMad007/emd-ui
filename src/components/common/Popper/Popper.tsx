@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import { PopperStyled } from './Popper.styled';
 
 interface PopperProps {
-  children: ReactNode;
+  children: ReactNode | ReactNode[] | string;
   positionY: string;
   positionX: string;
 }
