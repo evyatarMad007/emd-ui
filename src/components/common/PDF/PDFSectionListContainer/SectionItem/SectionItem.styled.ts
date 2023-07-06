@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fonts } from "../../../../../ui-settings";
+import { fonts } from "../../../../../ui-settings-configs";
 
 export const SectionItemStyled = styled.li`
   .section-number {

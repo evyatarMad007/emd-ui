@@ -10,6 +10,7 @@ interface TextInputProps {
   placeholder?: string;
   initValue?: string;
   fieldValidation: string;
+  maxWidth?: string;
   type?: string;
   inpDir?: "ltr" | "rtl";
 }
@@ -22,6 +23,7 @@ const TextInput: React.FC<TextInputProps> = ({
   placeholder = "",
   initValue = "",
   fieldValidation,
+  maxWidth = "max-content",
   type = "text",
   inpDir = "ltr",
 }) => {
@@ -46,7 +48,7 @@ const TextInput: React.FC<TextInputProps> = ({
   };
 
   return (
-    <InputContainerStyled inpDir={inpDir}>
+    <InputContainerStyled inpDir={inpDir} maxWidth={maxWidth}>
       <label className="TextInput-label" htmlFor={inpName}>
         {label}
       </label>

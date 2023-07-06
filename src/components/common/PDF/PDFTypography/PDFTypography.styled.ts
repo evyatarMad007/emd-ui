@@ -1,5 +1,5 @@
 import styled, { StyledComponent } from "styled-components";
-import { fonts } from "../../../../ui-settings";
+import { fonts } from "../../../../ui-settings-configs";
 
 interface PDFTypographyStyledProps {
   position?: string;

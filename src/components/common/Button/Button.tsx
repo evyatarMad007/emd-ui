@@ -1,7 +1,8 @@
 import React, { forwardRef, ForwardedRef, CSSProperties } from "react";
 import { ButtonStyled, disableStyle } from "./Button.styled";
 import Icon from "../Icon/Icon";
-import { colors } from "../../../ui-settings";
+import { colors } from "../../../ui-settings-configs";
+import { Colors, Variants } from "../../../types";
 
 interface IconProps {
   type: string | null;
@@ -19,7 +20,8 @@ interface ButtonProps {
   icon?: IconProps;
   className?: string;
   btnType?: "button" | "submit" | "reset";
-  background?: string;
+  color?: Colors;
+  variant: Variants;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -32,7 +34,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       onClick,
       style,
       className,
-      background,
+      color,
+      variant,
       btnType = "button",
       icon = { type: null, size: 15.5, color: colors.baseFont },
     },
@@ -49,13 +52,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <ButtonStyled
         className={className}
-        background={background}
+        color={color}
         ref={ref}
         type={btnType}
         dir={dir}
         onClick={onClick}
         id={id && id}
         style={getStyle(disable, style)}
+        variant={variant}
       >
         <div className="button-wrapper" dir={dir}>
           {children && (
