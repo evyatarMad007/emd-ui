@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { fonts } from "../../../../ui-settings";
+import { fonts } from "../../../../ui-settings-configs";
 
 // PDFPage Component: This component renders content within a single PDF page.
 const PDFPageStyled = styled.div`

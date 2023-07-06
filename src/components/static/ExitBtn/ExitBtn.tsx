@@ -1,7 +1,7 @@
 import React, { FC, MouseEventHandler } from "react";
 import { ExitBtnStyle } from "./ExitBtn.styled";
 import Icon from "../../common/Icon/Icon";
-import { colors } from "../../../ui-settings";
+import { colors } from "../../../ui-settings-configs";
 
 interface ExitBtnProps {
   onClick: MouseEventHandler;

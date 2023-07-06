@@ -1,45 +1,24 @@
 import styled, { CSSProperties, css } from "styled-components";
-import { colors } from "../../../ui-settings";
+import { colors } from "../../../ui-settings-configs";
+import { Colors, Variants } from "../../../types";
+import { getColors } from "../../../ui-settings-tools";
 
 interface PropsStyled {
-  padding?: string;
   dir?: "ltr" | "rtl";
-  background? : string;
+  color?: Colors;
+  variant?: Variants;
 }
 
 export const ButtonStyled = styled.button<PropsStyled>`
-  width: 100%;
-  height: 1.5rem;
+  position: relative;
+  cursor: pointer;
+  width: max-content;
+  height: 40px;
   display: flex;
   align-items: center;
   direction: ltr;
+  padding: 0 10px;
   border-radius: 0.5rem;
-  border: 0.5px solid #00000011;
-  position: relative;
-  cursor: pointer;
-  box-shadow: 0px 1.3px 1.5px #00000060;
-  background: ${({ background }) => background || colors.appMainPrimary1};
-
-  ${({ padding }) =>
-    padding &&
-    css`
-      padding: ${padding} !important;
-      width: max-content;
-      height: auto;
-    `};
-
-  &:hover {
-    opacity: 0.8;
-    transition: all 0.1s;
-  }
-
-  &:active {
-    filter: brightness(0.9);
-    border: 0.5px solid #0000001a;
-    transform: translateY(1.2px);
-    box-shadow: 0 0 0 #00000076;
-    transition: all 0s;
-  }
 
   .button-wrapper {
     cursor: pointer;
@@ -51,11 +30,8 @@ export const ButtonStyled = styled.button<PropsStyled>`
     text-align: center;
 
     .value {
-      font-size: 1rem;
+      font-size: 0.8125rem;
       direction: ltr;
-      color: white;
-      font-weight: bold;
-      text-shadow: 0px 0px 1px #000000;
 
       ${({ dir }) =>
         dir === "ltr"
@@ -78,6 +54,62 @@ export const ButtonStyled = styled.button<PropsStyled>`
       align-items: center;
     }
   }
+
+  &:active {
+    filter: brightness(0.8);
+  }
+
+  ${(props) => {
+    switch (props.variant) {
+      case "contained":
+        return css`
+          border: 0.5px solid #fffefe0a;
+          background: ${props.color && getColors(props.color).main};
+          box-shadow: inset 0 0 5px #fffefe0a;
+
+          &:hover {
+            opacity: 0.9;
+          }
+
+          .button-wrapper {
+            .value {
+              color: ${props.color && getColors(props.color).contrastText};
+              font-weight: bold;
+            }
+          }
+        `;
+      case "outlined":
+        return css`
+          border: 0.5px solid ${props.color && getColors(props.color).main};
+          background: transparent;
+          box-shadow: unset;
+
+          &:hover {
+            background: ${props.color && getColors(props.color).lighter};
+          }
+
+          .button-wrapper {
+            .value {
+              color: ${props.color && getColors(props.color).main};
+              /* font-weight: bold; */
+              /* text-shadow: 0px 0px 1px #000000; */
+            }
+          }
+        `;
+      case "text":
+        return css`
+          border: 1px solid transparent;
+          background: transparent;
+          box-shadow: unset;
+
+          &:hover {
+            background: #20202006;
+          }
+        `;
+      default:
+        return css``;
+    }
+  }}
 `;
 
 export const disableStyle: CSSProperties = {

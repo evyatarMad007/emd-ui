@@ -8,6 +8,8 @@ export const colors = {
   lightFont: "#4d4d4d",
   reverseFont: "#e2e2e2",
   fontLightColor: "#ffffff",
+  colorSilver: "#CBD5E1",
+  inputBorderColor: "#5706a3",
   // background colors
   headerBgc: "#FEFFFF",
   screenBgc: "#F5F6FA",

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakPoints, fonts } from "../../../ui-settings";
+import { breakPoints, fonts } from "../../../ui-settings-configs";
 
 interface LogoutButtonStyleProps {
   linkColor?: string;

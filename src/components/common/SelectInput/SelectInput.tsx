@@ -11,6 +11,7 @@ interface SelectInputProps {
   options: OptionType[];
   defaultValue?: string;
   inpDir?: "ltr" | "rtl";
+  maxWidth?: string;
   disabled?: boolean;
   onChange?: (event: { value: string; isValid: boolean }) => void;
 }
@@ -21,6 +22,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
   defaultValue,
   inpDir = "ltr",
   disabled = false,
+  maxWidth = "max-content",
   onChange,
 }) => {
   const [selectedOption, setSelectedOption] = useState(defaultValue);
@@ -43,7 +45,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
   }, [defaultValue, onChange]);
 
   return (
-    <SelectContainerStyled inpDir={inpDir}>
+    <SelectContainerStyled inpDir={inpDir} maxWidth={maxWidth}>
       <label className="SelectInput-label" htmlFor={inpName}>
         {label}
       </label>
