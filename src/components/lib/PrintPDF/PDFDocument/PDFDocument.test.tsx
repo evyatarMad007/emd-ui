@@ -1,6 +1,7 @@
 import React from 'react'
 import PDFDocument from './PDFDocument'
 import { render } from '@testing-library/react';
+jest.mock('jspdf', () => () => ({}));
 
 
 describe('PDFDocument', () => {
