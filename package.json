@@ -1,6 +1,6 @@
 {
   "name": "emd-ui",
-  "version": "4.0.3",
+  "version": "4.0.4",
   "description": "A UI component library for React",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -20,9 +20,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "git": "git add . && git commit -m \"update\" && git push",
-    "build": "npm run rollup && npm run build-storybook",
-    "prepublishOnly": "npm run build",
-    "pub-lib": "npm run git && npm version patch && npm publish --access public"
+    "pub-lib": "npm version patch && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.22.6",
