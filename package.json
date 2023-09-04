@@ -19,7 +19,7 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "git": "git add . && git commit -m \"$(date)\" && git push",
+    "git": "git add . && git commit -m \"update\" && git push",
     "build": "npm run rollup && npm run build-storybook",
     "prepublishOnly": "npm run build",
     "pub-lib": "npm run git && npm version patch && npm publish --access public"
