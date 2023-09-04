@@ -18,7 +18,11 @@
     "rollup": "rollup -c",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "git": "git add . && git commit -m \"$(date)\" && git push",
+    "build": "npm run rollup && npm run build-storybook",
+    "prepublishOnly": "npm run build",
+    "pub-lib": "npm run git && npm publish --access public"
   },
   "devDependencies": {
     "@babel/core": "^7.22.6",
