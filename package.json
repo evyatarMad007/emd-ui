@@ -1,6 +1,6 @@
 {
   "name": "emd-ui",
-  "version": "4.1.5",
+  "version": "4.1.6",
   "description": "A UI component library for React",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
