@@ -20,7 +20,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "git": "git add . && git commit -m \"update\" && git push",
-    "pub-lib": "npm version patch && npm publish"
+    "pub-lib": " npm run git && npm version patch && npm run git && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.22.6",
